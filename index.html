@@ -1,357 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <title>Dana - Angular</title>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta name="author" content="Fayyaz Azam">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-    <title>Dana Calinisan - Personal Portfolio</title>
+        <!-- Bootstrap/Font Awesome CDN-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.js"></script>
+        <!-- Google Fonts-->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'/>
+        <link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <!-- Local CSS-->
+        <link href="css/animate.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/responsive.min.css" rel="stylesheet" type="text/css" />
+    </head>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <body ng-app="danaApp">
+        <!-- Website Content Goes Here -->
+        <div ng-include='"app/header.html"'></div>
+        <div class="page {{ pageClass }}" ng-view></div>
+        <div ng-include='"app/footer.html"'></div>
 
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet" type="text/css">
+        <!-- jQuery / Angular CDNs-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
 
-    <!-- Theme CSS -->
-    <link href="css/portfolio.min.css" rel="stylesheet">
-    <!-- Modernizr -->
-    <script src="js/modernizr.custom.js"></script>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <span class="light">Home</span>
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">DANA CALINISAN</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="arrow-container">
-                <a href="#about" class="btn btn-circle page-scroll">
-                    <i class="fa fa-angle-down animated"></i>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Me</h2>
-                <p>big body of text big body of text big body of text big body of text big body of text big body of textbig body of text big body of text big body of text big body of text big body of text .</p>
-                <p>basic intro and stuff</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work Section -->
-    <section id="projects" class="content-section text-center">
-        <div class="projects-section">
-            <div class="container">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>My work</h2>
-                    <p>This place will have the two columns</p>
-                    <!-- The Grid with expanding previews -->
-                    <ul id="og-grid" class="og-grid">
-                        <li>
-                            <a href="#" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-                                <img src="img/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-                                <img src="img/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-                                <img src="img/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-                                <img src="img/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-                                <img src="img/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-                                <img src="img/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-                                <img src="img/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-                                <img src="img/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-                                <img src="img/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-                                <img src="img/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-                                <img src="img/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-                                <img src="img/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-                                <img src="img/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-                                <img src="img/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-                                <img src="img/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-                                <img src="img/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-                                <img src="img/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-                                <img src="img/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-                                <img src="img/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-                                <img src="img/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-                                <img src="img/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-                                <img src="img/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-                                <img src="img/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-                                <img src="img/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-                                <img src="img/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-                                <img src="img/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-                                <img src="img/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-                                <img src="img/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-                                <img src="img/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-                                <img src="img/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-                                <img src="img/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-                                <img src="img/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-                                <img src="img/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-                                <img src="img/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-                                <img src="img/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-                                <img src="img/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-                                <img src="img/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-                                <img src="img/thumbs/2.jpg" alt="img02"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-                                <img src="img/thumbs/3.jpg" alt="img03"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-                                <img src="img/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Me</h2>
-                <p>Feel free to email me blah blah!</p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/" class="btn btn-default btn-md"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://linkedin.com" class="btn btn-default btn-md"><i class="fa fa-linkedin-square fa-fw"></i> <span class="network-name">LinkedIn</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Designed by my loml, FayFay</p>
-        </div>
-    </footer>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/portfolio.min.js"></script>
-
-    <!-- Load the grid -->
-    <script>
-        $(function() {
-            Grid.init();
-        });
-    </script>
-
-</body>
+        <!-- Local js file-->
+        <script src="app/app.js" type="text/javascript"></script>
+    </body>
+    
 </html>
