@@ -9,13 +9,18 @@ app.config(function ($routeProvider) {
     $routeProvider
     // Home
     .when("/", { templateUrl: "app/home.html", controller: "PageCtrl" })
-    // Pages
+    // Work Page
     .when("/work", { templateUrl: "app/work.html", controller: "PageCtrl" })
+    // Experience Page
+    .when("/experience", { templateUrl: "app/experience.html", controller: "PageCtrl" })
+    // Contact Page
+    .when("/contact", { templateUrl: "app/contact.html", controller: "PageCtrl" })
 });
 
 
-app.controller('PageCtrl', function ( $scope) {
+app.controller('PageCtrl', function ($scope) {
     console.log("Page Controller loaded");
+    // Animation entrance for each page
     $scope.pageClass = 'page-effect';
 });
 
@@ -31,32 +36,6 @@ app.controller("dataImagesWork", function ($scope) {
           { num: 8, category: 'marketing', src: "8.jpg", description: 'Description'},//, url_details: "details.html" },
           { num: 9, category: 'design', src: "9.jpg", description: 'Description'}];//, url_details: "details.html"}];
 });
-
-
-//'use strict';
-app.directive('autoActive', ['$location', function ($location) {
-    return {
-        restrict: 'A',
-        scope: false,
-        link: function (scope, element) {
-            function setActive() {
-                var path = $location.path();
-                if (path) {
-                    angular.forEach(element.find('li'), function (li) {
-                        var anchor = li.querySelector('a');
-                        if (anchor.href.match('#' + path + '(?=\\?|$)')) {
-                            angular.element(li).addClass('current');
-                        } else {
-                            angular.element(li).removeClass('current');
-                        }
-                    });
-                }
-            }
-            setActive();
-            scope.$on('$locationChangeSuccess', setActive);
-        }
-    }
-} ]);
 
 
 
