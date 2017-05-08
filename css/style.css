@@ -38,6 +38,10 @@ h2 {
 	margin-bottom: 33px;
     padding-bottom: 7px;
     letter-spacing: 1px;
+
+    /* Gold color */
+    /* color: #ad8b34; */
+    color: #996633;
 }
 
 p {
@@ -76,7 +80,7 @@ header nav .menu  {
 header nav .menu li{
 	display: inline-block;
 	list-style-type: none;
-	padding: 20px 40px;
+	padding: 0px 40px 20px 40px;
     text-transform: uppercase;
 }
 header nav .menu li a{
@@ -85,8 +89,8 @@ header nav .menu li a{
 	font-weight: 400;
 	letter-spacing: 1px;
 }
-.menu .cl-effect-11 a::before {
-	padding: 7px 0;
+.menu .cl-effect-5 a::before {
+	/*padding: 7px 0;*/
 }
 .menu .current a { color: #333; border-bottom: 1px solid #333;}
 
@@ -122,8 +126,10 @@ header nav .menu li a{
 	position: relative;
     display: block;
     background-color: #fff;
+    /* For the image to be centred in weird resolutions*/
+	text-align: center;
 }
-#section1 i{
+#home i{
 	margin-right: 10px;
 }
 
@@ -175,40 +181,7 @@ dt { margin-right: 5px; }
 
 
 .filter .current a { color: #333; border-bottom: 1px solid #333;}
-.cl-effect-11 a {
-	padding: 10px 0;
-	color: #ccc;
-	text-shadow: none;
-	position: relative;
-	text-decoration: none;
-	text-shadow: 0 0 1px rgba(255,255,255,0.3);
-	font-weight: 400;
-	margin-right: 10px;
-	letter-spacing: 1px;
-} 
 
-.cl-effect-11 a::before {
-	position: absolute;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-	padding: 9px 0;
-	max-width: 0;
-	border-bottom: 1px solid #333;
-	color: #333;
-	font-weight: 400;
-	content: attr(data-hover);
-	-webkit-transition: max-width 0.5s;
-	-moz-transition: max-width 0.5s;
-	transition: max-width 0.5s;
-}
-.cl-effect-11.current a::before {
-	content: "";
-}
-.cl-effect-11 a:hover::before,
-.cl-effect-11 a:focus::before {
-	max-width: 100%;
-}
 /* Portfolio Items */
 .activegrid ul.nav-pills li {	
 	margin: 0px 0 0;

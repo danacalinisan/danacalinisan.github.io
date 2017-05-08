@@ -60,14 +60,14 @@
         border-bottom: 0px;
         line-height: 30px;
     }
-    .cl-effect-11 a::before {
+    .cl-effect-5 a::before {
         content: "";
         border-bottom: 0px;
     }
     .group {
         margin-bottom: 100px;
     }
-    .cl-effect-11 a:hover {
+    .cl-effect-5 a:hover {
         color: #111;
     }
 }
@@ -90,7 +90,7 @@
     h2 {
         margin-bottom: 20px;
     }
-    .cl-effect-11 a {
+    .cl-effect-5 a {
         font-size: 12px;
     }
     .grid figure figcaption p {

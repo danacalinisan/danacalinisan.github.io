@@ -1,31 +1,52 @@
 <div>
-  <header>
-    <div id="top" class="container">
-      <div class="row">
-        <div class="col-md-12 logo">
-            <!-- Logo Dimension Ratio-->
-            <!-- Logo1: 139 x 222-->
-            <!-- Logo2: Square -->
-            <div class="content-logo"><img src="images/logo.png" height="100" width="160"></div>
-        </div>
-        <nav class="col-md-12">
-          <div class="mini-menu"><i class="fa fa-bars"></i></div>
-          <ul class="menu" auto-active="">
-            <li class="cl-effect-11"><a data-hover="HOME" href="#/">Home</a></li>
-            <li class="cl-effect-11"><a data-hover="WORK" href="#/work">Work</a></li>
-            <li class="cl-effect-11"><a data-hover="EXPERIENCE" href="#/experience">Experience</a></li>
-            <li class="cl-effect-11"><a data-hover="CONTACT" href="#/contact">Contact</a></li>
-          </ul>
-        </nav>
+   <header>
+      <div id="top" class="container">
+         <div class="row">
+            <div class="col-md-12 logo">
+               <!-- Logo Dimension Ratio-->
+               <!-- Logo1: 100 x 160-->
+               <!-- Logo2: Square -->
+               <div class="content-logo"><img src="images/logo2.png" height="180" width="180"></div>
+            </div>
+            <nav class="col-md-12">
+               <div class="mini-menu"><i class="fa fa-bars"></i></div>
+               <ul class="menu" auto-active="">
+                  <li class="cl-effect-5">
+                     <a data-hover="HOME" href="#/">
+                        <span>Home</span>
+                     </a>
+                  </li>
+                  <li class="cl-effect-5">
+                     <a data-hover="WORK" href="#/work">
+                        <span>Work</span>
+                     </a>
+                  </li>
+                  <li class="cl-effect-5">
+                     <a data-hover="EXPERIENCE" href="#/experience">
+                        <span>Experience</span>
+                     </a>
+                  </li>
+                  <li class="cl-effect-5">
+                     <a data-hover="CONTACT" href="#/contact">
+                        <span>Contact</span>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
       </div>
-    </div>
-  </header>
-
-  <script>
+   </header>
+   <script>
       // Mobile menu toggle
-      var mobile_nav = $(".mini-menu");
-      mobile_nav.click(function () {
-          $("#top").find(".menu").toggle(2000);
+      $(".mini-menu").click(function () {
+          $("#top .menu").toggle(1000);
       });
-  </script>
+
+      // Close the mobile nav menu if we click on menu item
+      if($(".mini-menu").css('display') == 'block') {
+         $('.menu li').click(function() {
+            $("#top .menu").toggle(1000);
+         });
+      }
+   </script>
 </div>
