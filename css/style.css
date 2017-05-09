@@ -1,158 +1,153 @@
 ﻿/*-----------------*/
 /***** General *****/
 /*-----------------*/
-html, body {
+
+html,
+body {
     height: 100%;
 }
-
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Raleway',sans-serif;
-	font-weight: 300;
-	font-size: 13px;
-	line-height:22px;
-	color: #232323;
-	background-color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 22px;
+    color: #232323;
+    background-color: #fff;
 }
-
-ol, ul {
+ol,
+ul {
     margin-top: 0;
     margin-bottom: 0px;
     padding: 0;
 }
 h1 {
-	font-weight: 300;
-	font-size: 20px;
-	text-transform: uppercase;
-	text-align: center;
-	margin: 0px 0 50px 0;
-	letter-spacing: 4px;
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px 0 50px 0;
+    letter-spacing: 4px;
 }
 h2 {
-	font-weight: 700;
-	font-size: 13px;
-	text-transform: uppercase;
-	text-align: left;
-	border-bottom: 1px solid #212121;
-	margin-bottom: 33px;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;
+    border-bottom: 1px solid #212121;
+    margin-bottom: 33px;
     padding-bottom: 7px;
     letter-spacing: 1px;
-
     /* Gold color */
     /* color: #ad8b34; */
+    
     color: #996633;
 }
-
 p {
-	color: #616265;
-	font-weight: 400;
-	letter-spacing: 1px;
+    color: #616265;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 img {
     max-width: 100%;
 }
-
-.page-effect.ng-enter 		{  
-    -webkit-animation: fadeInDown 1s ease-in;
-    -moz-animation: fadeInDown 1s ease-in;
-    -o-animation: fadeInDown 1s ease-in;
-    animation: fadeInDown 1s ease-in;   
+.page-effect.ng-enter {
+    -webkit-animation: fadeInUp 1s ease-in;
+    -moz-animation: fadeInUp 1s ease-in;
+    -o-animation: fadeInUp 1s ease-in;
+    animation: fadeInUp 1s ease-in;
 }
-
 /*----------------*/
 /***** Header *****/
 /*----------------*/
-
 /***LOGO***/
-.content-logo {
-	width: 100%;
-	text-align: center;
-	margin-top: 60px;
-	margin-bottom: 40px;
-}
 
-/***MENU***/
-header nav .menu  {
-	width: 100%;
-	text-align: center;
+.content-logo {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
 }
-header nav .menu li{
-	display: inline-block;
-	list-style-type: none;
-	padding: 0px 40px 20px 40px;
+/***MENU***/
+
+header nav .menu {
+    width: 100%;
+    text-align: center;
+}
+header nav .menu li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0px 40px 20px 40px;
     text-transform: uppercase;
 }
-header nav .menu li a{
-	color: #7a7a7a;
-	text-decoration: none;
-	font-weight: 400;
-	letter-spacing: 1px;
+header nav .menu li a {
+    color: #7a7a7a;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
-.menu .cl-effect-5 a::before {
-	/*padding: 7px 0;*/
-}
-.menu .current a { color: #333; border-bottom: 1px solid #333;}
+/* Set current page header color */
 
+.menu a.current {
+    color: #996633;
+}
 /*****Mini Menu*****/
-.mini-menu {
-	text-align: center;
-	font-size: 20px;
-	margin-bottom: 20px;
-	display: none;
-}
 
+.mini-menu {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: none;
+}
 /*-------------------*/
 /***** Home Page *****/
 /*-------------------*/
-
 /***Structure***/
+
 .box-content {
-	width: 100%;
-	float: left;
-	padding: 40px 0 40px 0;
+    width: 100%;
+    float: left;
+    padding: 40px 0 40px 0;
 }
 .box-text {
-	border: 1px solid #dbdbdb;
-	padding: 28px 23px 31px;
-	position: relative;
+    border: 1px solid #dbdbdb;
+    padding: 28px 23px 31px;
+    position: relative;
     display: block;
     background-color: #fff;
     height: 400px;
 }
 .box-img {
-	border: 1px solid #dbdbdb;
-	padding: 28px 23px 31px;
-	position: relative;
+    border: 1px solid #dbdbdb;
+    padding: 28px 23px 31px;
+    position: relative;
     display: block;
     background-color: #fff;
     /* For the image to be centred in weird resolutions*/
-	text-align: center;
+    
+    text-align: center;
 }
-#home i{
-	margin-right: 10px;
+#home i {
+    margin-right: 10px;
 }
-
 .overlay {
-	padding: 100px 0;
+    padding: 100px 0;
 }
-
 .parallax {
-	background:url(../images/home_parallax_small.jpg) no-repeat center center fixed;    
-	-webkit-background-size: cover;
+    background: url(../images/home_parallax_small.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     width: 100%;
     float: left;
-    
 }
-
 .prod-line {
-	padding-bottom: 30px;
+    padding-bottom: 30px;
 }
-
 /*Skills*/
+
 .skills-box .meter {
     height: 6px;
     border: 1px solid #434343;
@@ -167,30 +162,43 @@ header nav .menu li a{
     float: right;
     color: #434343;
 }
-
 /*-------------------*/
 /***** Work Page *****/
 /*-------------------*/
 /* Filter */
-dl { margin-bottom: 5em; color: #777; }
-dt, dd { float: left; }
-dt { margin-right: 5px; }
-.group dd{width: 100%;}
-.group ul.filter{margin:0 auto 40px auto; text-align:center;}
-.filter li { display: inline-block; list-style: none; margin-right:5px;}
 
-
-.filter .current a { color: #333; border-bottom: 1px solid #333;}
-
-/* Portfolio Items */
-.activegrid ul.nav-pills li {	
-	margin: 0px 0 0;
-	display: inline-block;
-	vertical-align: top;
-	
+dl {
+    margin-bottom: 5em;
+    color: #777;
 }
-.my-gallery-animation.ng-enter, 
-.my-gallery-animation.ng-leave { 
+dt,
+dd {
+    float: left;
+}
+dt {
+    margin-right: 5px;
+}
+.group dd {
+    width: 100%;
+}
+.group ul.filter {
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+.filter li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 5px;
+}
+/* Portfolio Items */
+
+.activegrid ul.nav-pills li {
+    margin: 0px 0 0;
+    display: inline-block;
+    vertical-align: top;
+}
+.my-gallery-animation.ng-enter,
+.my-gallery-animation.ng-leave {
     -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
@@ -198,8 +206,7 @@ dt { margin-right: 5px; }
     transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     position: relative;
     display: block;
-} 
-
+}
 .my-gallery-animation.ng-leave.ng-leave-active,
 .my-gallery-animation.ng-enter {
     -webkit-transform: scale(0);
@@ -208,8 +215,7 @@ dt { margin-right: 5px; }
     -o-transform: scale(0);
     transform: scale(0);
     opacity: 0;
-}        
-
+}
 .my-gallery-animation.ng-enter.ng-enter-active,
 .my-gallery-animation.ng-leave {
     -webkit-transform: scale(1);
@@ -219,142 +225,128 @@ dt { margin-right: 5px; }
     transform: scale(1);
     opacity: 1;
 }
-
-
 /*----------------------*/
 /* Milo Effect for Grid*/
 /*----------------------*/
+
 .grid {
-	position: relative;
-	margin: 0 auto;
-	list-style: none;
-	text-align: center;
+    position: relative;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
 }
-
 /* Common style */
-.grid figure {
-	position: relative;
-	overflow: hidden;
-	text-align: center;
-	cursor: pointer;
-	margin-bottom: 30px;
-}
 
+.grid figure {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
 .grid figure img {
-	position: relative;
-	display: block;
-	opacity: 1;
-	
+    position: relative;
+    display: block;
+    opacity: 1;
 }
 .grid figure figcaption p {
-	color: #fff;
-	margin: 30% 0 10px 0;
-	padding: 10px;
+    color: #fff;
+    margin: 30% 0 10px 0;
+    padding: 10px;
 }
 .grid figure figcaption {
-	padding: 2em;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 13px;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
-
 .grid figure figcaption::before,
 .grid figure figcaption::after {
-	pointer-events: none;
+    pointer-events: none;
 }
-
 .grid figure figcaption,
 .grid figure figcaption > a {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-
 figure.effect-milo {
-	background: #383838;
+    background: #383838;
 }
-
 figure.effect-milo img {
-	max-width: none;
-	width: -webkit-calc(100% + 60px);
-	width: calc(100% + 60px);
-	opacity: 1;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(-30px,0,0) scale(1.12);
-	transform: translate3d(-30px,0,0) scale(1.12);
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+    max-width: none;
+    width: -webkit-calc(100% + 60px);
+    width: calc(100% + 60px);
+    opacity: 1;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-30px, 0, 0) scale(1.12);
+    transform: translate3d(-30px, 0, 0) scale(1.12);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
-
 figure.effect-milo:hover img {
-	opacity: 0.25;
-	-webkit-transform: translate3d(0,0,0) scale(1);
-	transform: translate3d(0,0,0) scale(1);
+    opacity: 0.25;
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(0, 0, 0) scale(1);
 }
-
 figure.effect-milo h2 {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	padding: 1em 1.2em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 1em 1.2em;
 }
-
 figure.effect-milo p {
-	padding: 0 10px 0 0;
-	width: 50%;
-	border-right: 1px solid #fff;
-	text-align: right;
-	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(-40px,0,0);
-	transform: translate3d(-40px,0,0);
+    padding: 0 10px 0 0;
+    width: 50%;
+    border-right: 1px solid #fff;
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-40px, 0, 0);
+    transform: translate3d(-40px, 0, 0);
 }
-
 figure.effect-milo:hover p {
-	opacity: 1;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
-
-
 /*----------------------*/
 /***** Work Details *****/
 /*----------------------*/
+
 .content-close-details a {
-	color:#333;
-	font-size: 14px;
-	text-align: center;
-	text-transform: uppercase;
-	text-decoration: none;
-	font-family: 'Open sans',sans-serif;
-	font-weight: 400;
-	letter-spacing: 2px;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
 }
 .content-close-details i {
-	margin-right: 10px;
-	font-size: 16px;
+    margin-right: 10px;
+    font-size: 16px;
 }
 .content-close-details {
-	text-align: center;
-	margin: 20px 0 20px 0;
+    text-align: center;
+    margin: 20px 0 20px 0;
 }
-
-
 /*----------------*/
 /***** Footer *****/
 /*----------------*/
-.footer-social {
-	text-align: center;
-}
 
+.footer-social {
+    text-align: center;
+}
 .footer-social a {
-	width: 25px;
+    width: 25px;
     height: 25px;
     line-height: 25px !important;
     position: relative;
@@ -362,20 +354,12 @@ figure.effect-milo:hover p {
     text-align: center;
     display: inline-block;
     color: #111;
-    border: 1px solid #111;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
     -webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -ms-transition: all 500ms ease;
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
 }
-
-footer .footer-social a:hover{
-    color: #fff;
-}
-.footer-social a:hover{
-    background: #111;
+footer .footer-social a:hover {
+    color: #996633;
 }

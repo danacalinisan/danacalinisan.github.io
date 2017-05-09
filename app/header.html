@@ -11,24 +11,24 @@
             <nav class="col-md-12">
                <div class="mini-menu"><i class="fa fa-bars"></i></div>
                <ul class="menu" auto-active="">
-                  <li class="cl-effect-5">
-                     <a data-hover="HOME" href="#/">
-                        <span>Home</span>
+                  <li class="cl-effect-1">
+                     <a class="current" data-hover="HOME" href="#/">
+                        HOME
                      </a>
                   </li>
-                  <li class="cl-effect-5">
+                  <li class="cl-effect-1">
                      <a data-hover="WORK" href="#/work">
-                        <span>Work</span>
+                        WORK
                      </a>
                   </li>
-                  <li class="cl-effect-5">
+                  <li class="cl-effect-1">
                      <a data-hover="EXPERIENCE" href="#/experience">
-                        <span>Experience</span>
+                        EXPERIENCE
                      </a>
                   </li>
-                  <li class="cl-effect-5">
+                  <li class="cl-effect-1">
                      <a data-hover="CONTACT" href="#/contact">
-                        <span>Contact</span>
+                        CONTACT
                      </a>
                   </li>
                </ul>
@@ -37,6 +37,12 @@
       </div>
    </header>
    <script>
+      //Set active header
+      $('.menu li a').on("click", function () {
+         $('.menu .current').removeClass('current');
+         $(this).addClass('current');
+      });
+
       // Mobile menu toggle
       $(".mini-menu").click(function () {
           $("#top .menu").toggle(1000);
