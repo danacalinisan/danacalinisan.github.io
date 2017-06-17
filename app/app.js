@@ -15,6 +15,8 @@ app.config(function ($routeProvider) {
   .when("/experience", { templateUrl: "app/experience.html", controller: "PageCtrl" })
   // Contact Page
   .when("/contact", { templateUrl: "app/contact.html", controller: "PageCtrl" })
+  // Work Details Page
+  .when("/details", { templateUrl: "app/details.html", controller: "dataImagesWork" })
 });
 
 app.controller('PageCtrl', function ($scope) {
@@ -23,19 +25,29 @@ app.controller('PageCtrl', function ($scope) {
   $scope.pageClass = 'page-effect';
 });
 
-app.controller("dataImagesWork", function ($scope) {
+app.controller("dataImagesWork", function ($location, $scope) {
   $scope.images_work = [
-    { num: 1, category: 'marketing', src: "1.jpg", description: 'Description'},//, url_details: "details.html" },
-    { num: 2, category: 'branding', src: "2.jpg", description: 'Description'},//, url_details: "details.html" },
-    { num: 3, category: 'design', src: "3.jpg", description: 'Description'},//, url_details: "details.html" },
-    { num: 4, category: 'photo', src: "4.jpg", description: 'Description'},//, url_details: "details.html" },
-    { num: 5, category: 'marketing', src: "5.jpg", description: 'Description'},//, url_details: "details.html" },
-    { num: 6, category: 'design', src: "6.jpg", description: 'Description'},//, url_details: "details.html" },
-    { num: 7, category: 'photo', src: "7.jpg", description: 'Description'},//, url_details: "details.html" },
-    { num: 8, category: 'marketing', src: "8.jpg", description: 'Description'},//, url_details: "details.html" },
-    { num: 9, category: 'design', src: "9.jpg", description: 'Description'}];//, url_details: "details.html"}];
-});
+    { num: 1, category: 'marketing', src: "1.jpg", description: 'Description'},
+    { num: 2, category: 'branding', src: "2.jpg", description: 'Description'},
+    { num: 3, category: 'design', src: "3.jpg", description: 'Description'},
+    { num: 4, category: 'photo', src: "4.jpg", description: 'Description'},
+    { num: 5, category: 'marketing', src: "5.jpg", description: 'Description'},
+    { num: 6, category: 'design', src: "6.jpg", description: 'Description'},
+    { num: 7, category: 'photo', src: "7.jpg", description: 'Description'},
+    { num: 8, category: 'marketing', src: "8.jpg", description: 'Description'},
+    { num: 9, category: 'design', src: "9.jpg", description: 'Description'}];
 
+  $scope.openWorkDetails = function(workDetails, $event) {
+    $scope.currentDetails = workDetails;
+    console.log($scope.currentDetails);
+
+    $event.preventDefault();
+    $("#work-section").fadeOut(1000, redirectPage);
+    function redirectPage() {
+      window.location = "#/details";
+    }
+  }
+});
 
 
 

@@ -1,0 +1,74 @@
+<div id="loader-wrapper">
+    <div id="loader"></div>
+</div>
+<section id="details-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 content-close-details">
+               <a class="close-redirect"><i class="fa fa-times"></i>Close</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+        	<div class="col-md-12">
+                <div ng-if="currentDetails">
+                    <img ng-src="images/portfolio/{{currentDetails.src}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="project" class="cd-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box-content">
+                    <h1> DESCRIPTION </h1>
+                    <div class="col-md-4">
+                        <div class="box-text">
+                            <h2>CASE STUDY</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box-text">
+                            <h2>RESULT</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box-text">
+                            <h2>Project data</h2>
+                            <h2>PROJECT DETAILS</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+	/********************************************
+	CLOSE PAGE 
+	********************************************/
+	$(document).ready(function () {
+	    $(".close-redirect").on("click", function (event) {
+	        event.preventDefault();
+	        linkLocation = ('#/work');
+	        $("#details-section").fadeOut(1000, redirectPage);
+	    });
+	    function redirectPage() {
+	        window.location = linkLocation;
+	    }
+	});
+</script>
+<script>
+       /*-------------------------------------------------*/
+       /* ANIMATE LOADER
+       /*-------------------------------------------------*/
+
+       try {
+           var timer;
+           window.clearTimeout(timer);
+           timer = setTimeout(function () { $("#loader-wrapper").slideUp() }, 2000);
+       } catch (err) {
+       }
+   </script>

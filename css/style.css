@@ -39,9 +39,6 @@ h2 {
     margin-bottom: 33px;
     padding-bottom: 7px;
     letter-spacing: 1px;
-    /* Gold color */
-    /* color: #ad8b34; */
-    
     color: #996633;
 }
 p {
@@ -58,6 +55,7 @@ img {
     -o-animation: fadeInUp 1s ease-in;
     animation: fadeInUp 1s ease-in;
 }
+
 /*----------------*/
 /***** Header *****/
 /*----------------*/
@@ -70,7 +68,6 @@ img {
     margin-bottom: 40px;
 }
 /***MENU***/
-
 header nav .menu {
     width: 100%;
     text-align: center;
@@ -82,18 +79,17 @@ header nav .menu li {
     text-transform: uppercase;
 }
 header nav .menu li a {
-    color: #7a7a7a;
+    /*color: #7a7a7a;*/
+    color: #333;
     text-decoration: none;
     font-weight: 400;
     letter-spacing: 1px;
 }
 /* Set current page header color */
-
 .menu a.current {
     color: #996633;
 }
 /*****Mini Menu*****/
-
 .mini-menu {
     text-align: center;
     font-size: 20px;
@@ -319,6 +315,15 @@ figure.effect-milo:hover p {
 /*----------------------*/
 /***** Work Details *****/
 /*----------------------*/
+#details-section {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: white;
+    top: 0;
+    left: 0;
+}
 
 .content-close-details a {
     color: #333;
@@ -338,6 +343,119 @@ figure.effect-milo:hover p {
     text-align: center;
     margin: 20px 0 20px 0;
 }
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: #fff;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    border-top-color: #000;
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    border-top-color: #8e908f;
+    -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+      animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+ 
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    border-top-color: #d0cfcb;
+    -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+/*--------------------*/
+/***** EXPERIENCE *****/
+/*--------------------*/
+.experiences {
+    padding: 0 0 0 0;
+}
+.list-experiences h2 i{
+    margin-right: 10px;
+    color: #8e908f;/*#8d7e60;*/
+    font-size: 16px;
+}
+.list-experiences h2 span.date {
+    font-family: 'Open sans', sans-serif;
+    font-weight: 400;
+    float: right;
+    font-style: italic;
+}
+.skills-box .skills-bar {
+    border: 1px solid #212121;
+    height: 6px;
+    padding: 1px;
+    margin-bottom: 15px;
+}
+.skills-box .skills-bar p {
+    height: 2px;
+    background: #996633;
+}
+.skills-box > p {
+    color: #333;
+}
+.skills-box > p span {
+    float: right;
+    color: #333;
+}
+
 /*----------------*/
 /***** Footer *****/
 /*----------------*/

@@ -24,7 +24,7 @@
                         </a>                              
                         <figcaption>
                            <p>{{product.description}}</p>
-                           <!-- WIP <a href="partials/details.html" class="smooth-redirect"></a> -->
+                           <a href="#/details" ng-click="openWorkDetails(product, $event)"></a>
                         </figcaption>
                      </figure>
                   </li>
@@ -42,12 +42,12 @@
 </script>
 <script>
    /********************************************
-   CLOSE PAGE DETAIL
+   CLOSE PAGE 
    ********************************************/
    $(".smooth-redirect").on("click", function (event) {
       event.preventDefault();
       linkLocation = this.href;
-      $("body").fadeOut(1000, redirectPage);
+      $("#work-section").fadeOut(1000, redirectPage);
    });
    function redirectPage() {
       window.location = linkLocation;
