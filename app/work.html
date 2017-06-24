@@ -1,55 +1,42 @@
 <section id="work-section">
-   <div class="container">
-      <div class="row">
-         <div class="box-content">
-            <dl class="group">
-               <dt></dt>
-               <dd>
-                  <ul class="filter group albumFilter">
-                     <li class="cl-effect-17 current"><a data-hover="ALL" ng-click="myFilter = {category: '!!'}" class="active" href="">ALL</a></li>
-                     <li class="cl-effect-17"><a data-hover="RENDERING" ng-click="myFilter = {category: 'marketing'}" href="">RENDERING</a></li>
-                     <li class="cl-effect-17"><a data-hover="PERSPECTIVE" ng-click="myFilter = {category: 'branding'}" href="">PERSPECTIVE</a></li>
-                     <li class="cl-effect-17"><a data-hover="FLOORPLAN" ng-click="myFilter = {category: 'design'}" href="">FLOORPLAN</a></li>
-                     <li class="cl-effect-17"><a data-hover="FREEHAND" ng-click="myFilter = {category: 'photo'}" href="">FREEHAND</a></li>
-                     <li class="cl-effect-17"><a data-hover="PROJECT" ng-click="myFilter = {category: 'photo'}" href="">PROJECT</a></li>
-                  </ul>
-               </dd>
-            </dl>
-            <div class="portfolio albumContainer activegrid" ng-controller="dataImagesWork">
-               <ul id="product" class="nav-pills nav-stacked rectangle-list" ng-controller="dataImagesWork">
-                  <li class="col-md-4 my-gallery-animation item grid" ng-repeat="product in images_work | filter:myFilter">
-                     <figure class="effect-milo">
-                        <a href="">
+  <div class="container">
+    <div class="row">
+      <div class="box-content">
+        <dl class="group">
+          <dt></dt>
+          <dd>
+            <ul class="filter group albumFilter">
+              <li class="cl-effect-17 current"><a data-hover="ALL" ng-click="myFilter = {category: '!!'}" class="active" href="">ALL</a></li>
+              <li class="cl-effect-17"><a data-hover="RENDERING" ng-click="myFilter = {category: 'marketing'}" href="">RENDERING</a></li>
+              <li class="cl-effect-17"><a data-hover="PERSPECTIVE" ng-click="myFilter = {category: 'branding'}" href="">PERSPECTIVE</a></li>
+              <li class="cl-effect-17"><a data-hover="FLOORPLAN" ng-click="myFilter = {category: 'design'}" href="">FLOORPLAN</a></li>
+              <li class="cl-effect-17"><a data-hover="FREEHAND" ng-click="myFilter = {category: 'photo'}" href="">FREEHAND</a></li>
+              <li class="cl-effect-17"><a data-hover="PROJECT" ng-click="myFilter = {category: 'photo'}" href="">PROJECT</a></li>
+            </ul>
+          </dd>
+        </dl>
+        <div class="portfolio albumContainer activegrid" ng-controller="dataImagesWork">
+          <ul id="product" class="nav-pills nav-stacked rectangle-list" ng-controller="dataImagesWork">
+            <li class="col-md-4 my-gallery-animation item grid" ng-repeat="product in images_work | filter:myFilter">
+              <figure class="effect-milo">
+                <a href="">
                         <img ng-src="images/portfolio/{{product.src}}">
-                        </a>                              
-                        <figcaption>
-                           <p>{{product.description}}</p>
-                           <a href="#/details" ng-click="openWorkDetails(product, $event)"></a>
-                        </figcaption>
-                     </figure>
-                  </li>
-               </ul>
-            </div>
-         </div>
+                        </a>
+                <figcaption>
+                  <p>{{product.description}}</p>
+                  <a href="#/details" ng-click="openWorkDetails(product, $event)"></a>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
       </div>
-   </div>
+    </div>
+  </div>
 </section>
 <script>
-   $('.albumFilter li').on("click", function () {
-      $('.albumFilter .current').removeClass('current');
-      $(this).addClass('current');
-   });
-</script>
-<script>
-   /********************************************
-   CLOSE PAGE 
-   ********************************************/
-   $(".smooth-redirect").on("click", function (event) {
-      event.preventDefault();
-      linkLocation = this.href;
-      $("#work-section").fadeOut(1000, redirectPage);
-   });
-   function redirectPage() {
-      window.location = linkLocation;
-   }
+  $('.albumFilter li').on("click", function() {
+    $('.albumFilter .current').removeClass('current');
+    $(this).addClass('current');
+  });
 </script>
