@@ -48,7 +48,7 @@ h2 {
   color: #996633;
 }
 
-p {
+p, span {
   color: #616265;
   font-weight: 400;
   letter-spacing: 1px;
@@ -574,6 +574,119 @@ figure.effect-milo:hover p {
   color: #333;
 }
 
+/*----------------*/
+
+
+/***** Contact *****/
+
+
+/*----------------*/
+.contact .info i{
+	color: #212121;
+	background: #fff;
+	border:1px solid #212121;
+	padding: 10px;
+	margin-right: 10px;
+}
+.contact .info i.fa-phone{
+	padding: 10px 11px;
+}
+.contact .info i.fa-map-marker{
+	padding: 10px 13px;
+}
+.contact .info{
+	text-align: center;
+	margin: 10px 0 80px 0;
+	font-family: 'Open sans',sans-serif;
+	font-weight: 300;
+}
+#name,#email,#subject {
+	width: 100%;
+	background: #fff;
+}
+#subject,#email {
+	margin-top: 20px;
+}
+#message {
+	height: 178px;
+	background: #fff;
+	border: 1px solid rgba(0,0,0, .2);
+	letter-spacing: 1px;
+}
+
+#message:focus,
+#name:focus,
+#subject:focus,
+#email:focus {
+	color: #111;
+	border-color: rgba(0,0,0, .7);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0, .3);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0, .3);
+	box-shadow: 0 0 3px rgba(0,0,0, .3);
+    outline: none !important;
+}
+
+.input-info {
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 13px;
+    color: #333;
+    background: #fff;
+}
+.form input[type="text"], 
+.form input[type="email"]  {
+    display: inline-block;    
+    vertical-align: middle;
+    letter-spacing: 1px;
+    color: #777;
+    border: 1px solid rgba(0,0,0, .2);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.submit-info {
+	margin-top: 20px;
+	background: #fff;
+	color: #212121;
+	border: 1px solid #212121;
+	font-size: 13px;
+	font-family: 'Open sans',sans-serif;
+	font-weight: 400;
+	border-radius:0px;
+	padding: 10px 25px;
+	float: right;
+	-webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+.submit-info:hover {
+	color: #fff;
+	background: #212121;
+}
+.submit-info:hover[disabled] {
+	opacity: 0.65;
+	background: #fff;
+	color: #212121;
+	
+}
+
+.submit-info i {
+	margin-right: 10px;
+}
+
+.has-error {
+	border: 1px solid red !important;
+}
 
 /*----------------*/
 

@@ -1,60 +1,58 @@
-<div>
-    <header>
-        <div id="top" class="container">
-            <div class="row">
-                <div class="col-md-12 logo">
-                    <!-- Logo Dimension Ratio-->
-                    <!-- Logo1: 100 x 160-->
-                    <!-- Logo2: Square -->
-                    <div class="content-logo"><img src="images/logo2.png" height="200" width="200"></div>
-                </div>
-                <nav class="col-md-12">
-                    <div class="mini-menu">
-                        <i class="fa fa-bars"></i>
-                    </div>
-                    <ul class="menu" auto-active="">
-                        <li class="cl-effect-1">
-                            <a class="current" data-hover="HOME" href="#/">
-                                HOME
-                            </a>
-                        </li>
-                        <li class="cl-effect-1">
-                            <a data-hover="WORK" href="#/work">
-                                WORK
-                            </a>
-                        </li>
-                        <li class="cl-effect-1">
-                            <a data-hover="EXPERIENCE" href="#/experience">
-                                EXPERIENCE
-                            </a>
-                        </li>
-                        <li class="cl-effect-1">
-                            <a data-hover="CONTACT" href="#/contact">
-                                CONTACT
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <script>
-        //Set active header
-        $('.menu li a').on("click", function () {
-            $('.menu .current').removeClass('current');
-            $(this).addClass('current');
-        });
+<header>
+	<div id="top" class="container">
+		<div class="row">
+			<div class="col-md-12 logo">
+				<!-- Logo Dimension Ratio-->
+				<!-- Logo1: 100 x 160-->
+				<!-- Logo2: Square -->
+				<div class="content-logo"><img src="images/logo2.png" height="200" width="200"></div>
+			</div>
+			<nav class="col-md-12">
+				<div class="mini-menu">
+					<i class="fa fa-bars"></i>
+				</div>
+				<ul class="menu" auto-active="">
+					<li class="cl-effect-1">
+						<a class="current" data-hover="HOME" href="#/">
+							HOME
+						</a>
+					</li>
+					<li class="cl-effect-1">
+						<a data-hover="WORK" href="#/work">
+							WORK
+						</a>
+					</li>
+					<li class="cl-effect-1">
+						<a data-hover="EXPERIENCE" href="#/experience">
+							EXPERIENCE
+						</a>
+					</li>
+					<li class="cl-effect-1">
+						<a data-hover="CONTACT" href="#/contact">
+							CONTACT
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+<script>
+	//Set active header
+	$('.menu li a').on("click", function() {
+		$('.menu .current').removeClass('current');
+		$(this).addClass('current');
+	});
 
-        // Mobile menu toggle
-        $(".mini-menu").click(function () {
-            $("#top .menu").toggle(1000);
-        });
+	// Mobile menu toggle
+	$(".mini-menu").click(function() {
+		$("#top .menu").toggle(1000);
+	});
 
-        // Close the mobile nav menu if we click on menu item
-        if ($(".mini-menu").css('display') == 'block') {
-            $('.menu li').click(function () {
-                $("#top .menu").toggle(1000);
-            });
-        }
-    </script>
-</div>
+	// Close the mobile nav menu if we click on menu item
+	if ($(".mini-menu").css('display') == 'block') {
+		$('.menu li').click(function() {
+			$("#top .menu").toggle(1000);
+		});
+	}
+</script>

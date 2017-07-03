@@ -1,9 +1,59 @@
 <section id="contact-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                Stub
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 box-content">
+				<h1>Contact</h1>
+				<div class="box-content contact">
+					<div class="col-md-4 info">
+						<p><i class="fa fa-phone"></i>604 123 4567</p>
+					</div>
+					<div class="col-md-4 info">
+						<p><i class="fa fa fa-map-marker"></i>Vancouver, BC</p>
+					</div>
+					<div class="col-md-4 info">
+						<p><i class="fa fa-envelope-o"></i>hello@world.com</p>
+					</div>
+
+					<!-- E-mail form (using formspree) -->
+					<form class="form email-form" name="contactForm" ng-submit="submitForm(contactForm.$valid)" novalidate>
+						<div class="col-md-6">
+							<!-- Name -->
+							<input type="text" id="name" name="name" class="input-info" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine }" ng-model="name" placeholder="Name" required>
+							
+							<!-- Subject -->
+							<input type="text" id="subject" name="subject" ng-class="{ 'has-error' : contactForm.subject.$invalid && !contactForm.subject.$pristine }" class="input-info" ng-model="subject" placeholder="Subject" required>
+							
+							<!-- Email -->
+							<input type="email" id="email" name="email" class="input-info" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }" ng-model="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" placeholder="E-mail" required>
+						</div>
+						
+						<!-- Submit and error messages -->
+						<div class="col-md-6">
+							<!-- Message -->
+							<textarea name="message" id="message" class="input-info" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }" ng-model="message" ng-minlength="20" placeholder="Message" cols="30" rows="7" required></textarea>
+							
+							<button type="submit" class="btn submit-info" ng-disabled="contactForm.$invalid">
+								<i class="fa fa-envelope-o"></i>
+								SEND
+							</button>
+							
+							<!-- Error Messages-->
+							<span ng-show="contactForm.name.$invalid && !contactForm.name.$pristine">
+								Name is required.
+							</span>
+							<span ng-show="contactForm.subject.$invalid && !contactForm.subject.$pristine">
+								Subject is required.
+							</span>
+							<span ng-show="contactForm.email.$invalid && !contactForm.email.$pristine">
+								E-mail must be valid.
+							</span>
+							<span ng-show="contactForm.message.$invalid && !contactForm.message.$pristine">
+								Message must be at least 20 characters.
+							</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
