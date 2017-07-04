@@ -15,7 +15,7 @@
 					</div>
 
 					<!-- E-mail form (using formspree) -->
-					<form class="form email-form" name="contactForm" ng-submit="submitForm(contactForm.$valid)" novalidate>
+					<form class="form email-form" id="contactForm" name="contactForm" ng-submit="submitForm(contactForm.$valid)" novalidate>
 						<div class="col-md-6">
 							<!-- Name -->
 							<input type="text" id="name" name="name" class="input-info" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine }" ng-model="name" placeholder="Name" required>
