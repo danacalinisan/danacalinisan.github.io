@@ -22,7 +22,11 @@ angular.module('danaApp').controller('PageCtrl',
 					},
 					dataType: "json",
 					success: function () {
-						alert("success, apparently");
+						$("#submit-success").fadeIn();
+						$("#contactForm").fadeOut();
+					},
+					error: function () {
+						$("#submit-error").fadeIn();
 					}
 				});
 			}

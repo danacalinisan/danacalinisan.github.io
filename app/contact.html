@@ -50,8 +50,15 @@
 							<span ng-show="contactForm.message.$invalid && !contactForm.message.$pristine">
 								Message must be at least 20 characters.
 							</span>
+							<span id="submit-error" style="display: none">
+								It looks like there was an error submitting the form.
+  								Please try again later.
+							</span>
 						</div>
 					</form>
+					<div class="box-content" id="submit-success" style="display: none">
+					  <h1>Message received! I'll be in touch.</h1>
+					</div>
 				</div>
 			</div>
 		</div>
