@@ -1,3 +1,5 @@
 # danacalinisan.github.io
 
-### portfolio made using angular. to be updated.
+### Code is left as-is, neither of us have time to finish
+### Feel free to grab the code and use elements
+### as I still find it to be quite attractive :)
